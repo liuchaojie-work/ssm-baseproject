@@ -34,7 +34,7 @@
 	<!-- begin of header -->
 	<div class="wu-header" data-options="region:'north',border:false,split:true">
     	<div class="wu-header-left">
-        	<h1>【猿来入此】后台管理系统</h1>
+        	<h1>XXXX后台管理系统</h1>
         </div>
         <div class="wu-header-right">
         	<p><strong class="easyui-tooltip" title="0条未读消息">${role.name}:${admin.username}</strong>，欢迎您！</p>
@@ -68,7 +68,7 @@
     <!-- end of main --> 
     <!-- begin of footer -->
 	<div class="wu-footer" data-options="region:'south',border:true,split:true">
-    	&copy; 2018 【猿来入此】 All Rights Reserved
+    	&copy; 2020 XXXX All Rights Reserved
     </div>
     <!-- end of footer -->  
     <script type="text/javascript">

@@ -41,13 +41,25 @@ public class SystemController {
 
     /**
      * 法二：推荐使用
+     * 系统登录后主页
      * @param modelAndView
      * @return
      */
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView index(ModelAndView modelAndView){
         modelAndView.setViewName("system/index");
-        modelAndView.addObject("name","I'm OK");//前端使用${name}
+        return modelAndView;
+
+    }
+
+    /**
+     * 系统登录后的欢迎页
+     * @param modelAndView
+     * @return
+     */
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    public ModelAndView welcome(ModelAndView modelAndView){
+        modelAndView.setViewName("system/welcome");
         return modelAndView;
     }
 
@@ -103,6 +115,7 @@ public class SystemController {
             ret.put("msg","密码错误！");
             return ret;
         }
+        request.getSession().setAttribute("admin", byUsername);
         ret.put("type","success");
         ret.put("msg","登录成功！");
         return ret;
