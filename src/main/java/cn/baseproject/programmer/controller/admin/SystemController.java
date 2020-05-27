@@ -1,8 +1,11 @@
 package cn.baseproject.programmer.controller.admin;
 
 import cn.baseproject.programmer.entity.admin.User;
+import cn.baseproject.programmer.service.admin.IUserService;
 import cn.baseproject.programmer.util.CpachaUtil;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,6 +27,12 @@ import java.util.Map;
 @Controller
 @RequestMapping("/system")
 public class SystemController {
+
+
+    @Qualifier("userServiceImpl")
+    @Autowired
+    private IUserService userService;
+
     /*法一
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(){
@@ -81,6 +90,17 @@ public class SystemController {
         if(!loginCpacha.toString().toUpperCase().equals(cpacha.toUpperCase())){
             ret.put("type","error");
             ret.put("msg","验证码错误！");
+            return ret;
+        }
+        User byUsername = userService.findByUsername(user.getUsername());
+        if(null == byUsername){
+            ret.put("type","error");
+            ret.put("msg","该用户名不存在！");
+            return ret;
+        }
+        if(!byUsername.getPassword().equals(user.getPassword())){
+            ret.put("type","error");
+            ret.put("msg","密码错误！");
             return ret;
         }
         ret.put("type","success");
