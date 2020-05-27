@@ -125,6 +125,7 @@
       <artifactId>jsqlparser</artifactId>
       <version>1.0</version>
     </dependency>
+    <!--jstl依赖不起作用，必须放入tomcat中lib文件夹-->
     <dependency>
       <groupId>javax.servlet.jsp.jstl</groupId>
       <artifactId>jstl</artifactId>
@@ -215,6 +216,12 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>4.3.9.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+      <version>1.1.2</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
