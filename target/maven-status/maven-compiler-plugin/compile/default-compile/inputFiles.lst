@@ -2,6 +2,7 @@ F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\c
 F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\service\admin\impl\UserServiceImpl.java
 F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\util\CpachaUtil.java
 F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\service\admin\IUserService.java
+F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\interceptor\admin\LoginInterceptor.java
 F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\dao\admin\IUserDao.java
-F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\interceptor\LoginInterceptor.java
+F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\controller\admin\MenuController.java
 F:\IntelliJIDEProjects\ssm-baseproject\src\main\java\cn\baseproject\programmer\entity\admin\User.java

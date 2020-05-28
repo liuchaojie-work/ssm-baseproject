@@ -44,17 +44,14 @@
     </bean>
 
     <!--后台访问拦截器-->
-    <!--<mvc:interceptors>
+    <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <mvc:mapping path="/grade/*"/>
+            <mvc:mapping path="/admin/**"/>
+            <mvc:mapping path="/system/*"/>
             <mvc:exclude-mapping path="/system/login"/>
             <mvc:exclude-mapping path="/system/get_cpacha"/>
-            <mvc:exclude-mapping path="/h-ui/**"/>
-            <mvc:exclude-mapping path="/easyui/**"/>
-            <mvc:exclude-mapping path="/home-resources/**"/>
-            <mvc:exclude-mapping path="/home/**"/>
-            <bean class="cn.baseproject.programmer.interceptor.LoginInterceptor"/>
+            <mvc:exclude-mapping path="/resources/**"/>
+            <bean class="cn.baseproject.programmer.interceptor.admin.LoginInterceptor"/>
         </mvc:interceptor>
-    </mvc:interceptors>-->
+    </mvc:interceptors>
 </beans>
